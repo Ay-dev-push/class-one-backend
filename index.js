@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express();
-const A = 2000
+const PORT = process.env.PORT 
+const dotenv = require('dotenv').config()
 const students = [
     {
         Name: "John Doe",
@@ -160,7 +161,7 @@ app.get("/artist", (req, res) => {
     res.send(music)
 })
 
-app.listen(A, () => {
+app.listen(PORT, () => {
     console.log(`I am running on port 2000`);
 
 })
